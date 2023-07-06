@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="success.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="card">
+        <img src="icon-success.svg" class="icon">
+        <h1>Thanks for subscribing!</h1>
+        <p>A confirmation email has been sent to <span id="eemail"></span>. Please open it and click the button inside
+            to confirm you subscription</p>
+        <form action="index.html">
+            <button class="btn" type="submit">Dismiss message</button>
+        </form>
+    </div>
+    <script>
+        window.onload = function(){
+            const val = localStorage.getItem("myemail");
+            const op = document.getElementById("eemail");
+            op.innerText = val;
+            localStorage.clear; 
+        }
+    </script>
+</body>
+
+</html>

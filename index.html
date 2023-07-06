@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter sign up with success message</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="card">
+        <div class="login">
+            <h1>Stay updated!</h1>
+            <p class="info">Join 60,000+ product managers receiving monthly updates on:</p>
+            <div class="list">
+                <div class="item">
+                    <img src="icon-list.svg">
+                    <p>Product discovery and building what matters</p>
+                </div>
+                <div class="item">
+                    <img src="icon-list.svg">
+                    <p>Measuring to ensure updates are a success</p>
+                </div>
+                <div class="item">
+                    <img src="icon-list.svg">
+                    <p>And much more!</p>
+                </div>
+            </div>
+            <div class="id-login">
+                <form action="success.html">
+                    <div class="paras">
+                        <p class="emaill">Email address</p>
+                        <p class="invalid">Valid email required</p>
+                    </div>
+                    <input type="email" name="mail" id="mail" placeholder="email@company.com">
+                    <button class="btn" onclick="getval()">Subscribe to monthly newsletter</button>
+                </form>
+            </div>
+        </div>
+        <div class="pic">
+            <img src="illustration-sign-up-desktop.svg">
+        </div>
+    </div>
+    <script>
+        function getval(){
+            const emaila = document.getElementById('mail');
+            const mailid = emaila.value;
+            localStorage.setItem("myemail",mailid);
+            window.location.href("success.html");
+        }
+    </script>
+</body>
+</html>

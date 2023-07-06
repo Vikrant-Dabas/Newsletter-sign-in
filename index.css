@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: hsl(235, 18%, 26%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: white;
+    display: flex;
+    border-radius: 1.5rem;
+    width: 650px;
+    padding: 1rem;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex: 1;
+    padding: 2rem 1.5rem;
+}
+
+.login h1 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: hsl(234, 29%, 20%);
+    font-size: 2.5rem;
+}
+
+.info,
+.list p {
+    font-size: 11px;
+    font-weight: 400;
+    padding-right: 0.5rem;
+    font-weight: 500;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0rem;
+    gap: .5rem;
+    width: 100%;
+}
+
+.item {
+    display: flex;
+    gap: .5rem;
+}
+
+.item img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.pic {
+    flex: 1;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.id-login {
+    margin-top: .75rem;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1.25rem;
+}
+.paras{
+    display: flex;
+    justify-content: space-between;
+}
+.emaill {
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+.invalid{
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    color: hsl(4, 100%, 67%);
+    visibility:hidden;
+}
+#mail {
+    height: 2.5rem;
+    border-radius: 5px;
+    border-color: hsl(231, 7%, 60%);
+    border-width: 1px;
+    width: 100%;
+}
+
+input {
+    padding: 0.5rem 1rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    height: 2.5rem;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    border-radius: 5px;
+    font-size: .7rem;
+    font-weight: 700;
+    border: none;
+}
+.btn:hover {
+    background-image: linear-gradient(to left, hsl(4, 100%, 67%), rgba(245, 40, 76, 0.9));
+}
+@media screen and (max-width:650px) {
+    body {
+        max-height: 100vh;
+    }
+
+    .card {
+        flex-direction: column-reverse;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .pic img {
+        src: url('illustration-sign-up-mobile.svg');
+    }
+
+    .info,
+    .list p {
+        font-size: 15px;
+    }
+
+    .item {
+        gap: .7rem;
+    }
+
+    .login h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    #mail {
+        border-radius: 8px;
+    }
+
+    ::placeholder {
+        font-size: 14px;
+    }
+}
